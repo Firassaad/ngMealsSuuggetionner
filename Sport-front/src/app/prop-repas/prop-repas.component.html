@@ -1,0 +1,35 @@
+<body>
+
+    <div class="contact-us">
+        <h2 style="text-align: center;">Sport frs</h2>
+        <br>
+        <br>
+        <form (ngSubmit)="addCalorie(myInput.value)">
+            <div style="text-align: center;">
+                <input placeholder="write cal max and press Enter" type="text" class="input_cal" #myInput>
+            </div>
+            <div class="contenu">
+                <ul class="code-editor-options-menu" *ngFor="let dat of frs ; let i = index">
+
+                    <!-- <span><h3>meal N° {{i}}</h3>  name :{{dat.name}} </br>  number of calories : {{dat.cal}}</span> -->
+                    <!-- <span aria-hidden="true">{{dat.stuff.cmd}}</span> -->
+                    <table>
+                        <thead>
+                            <tr>
+                                <th colspan="2">meal N° {{i}}</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td> name :{{dat.name}}</td>
+                                <td> number of calories : {{dat.cal}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </ul>
+            </div>
+        </form>
+    </div>
+
+</body>
